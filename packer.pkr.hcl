@@ -17,16 +17,17 @@ locals {
 
 # Resolve latest Amazon Linux 2023 AMI via SSM
 data "amazon-ami" "al202" {
-  name = "al2023-ami-2023.*-kernel-*-x86_64"
-  virtualization-type = "hvm"
-  architecture = "x86_64"
-  root-device-type = "ebs"	
+  filters = {
+    name = "al2023-ami-2023.*-kernel-*-x86_64"
+    virtualization-type = "hvm"
+    architecture = "x86_64"
+    root-device-type = "ebs"	
 }
 
 owners = ["amazon"]
 most_recent = true
 region = ap-south-1
-
+}
 source "amazon-ebs" "al2023_ansible" {
   region        = ap-south-1
   ami_name      = "al2023-ansible-${local.timestamp}"
