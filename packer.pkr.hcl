@@ -29,7 +29,7 @@ most_recent = true
 region = ap-south-1
 }
 source "amazon-ebs" "al2023_ansible" {
-  region        = ap-south-1
+  region        = "ap-south-1"
   ami_name      = "al2023-ansible-${local.timestamp}"
   instance_type = "t2.micro"
   subnet_id = "subnet-0d03288c901f4e073"
