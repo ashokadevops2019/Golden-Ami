@@ -16,6 +16,7 @@ locals {
 }
 
 data "amazon-ami" "al202" {
+  source_ami_filter {
   filters = {
     name                 = "al2023-ami-2023.8.20250808.1-kernel-6.1-x86_64"
     virtualization-type  = "hvm"
@@ -26,7 +27,7 @@ data "amazon-ami" "al202" {
   most_recent  = true
   region       = "ap-south-1"
 }
-
+}
 source "amazon-ebs" "al2023_ansible" {
   region                 = "ap-south-1"
   ami_name               = "al2023-ansible-${local.timestamp}"
