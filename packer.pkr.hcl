@@ -31,7 +31,6 @@ source "amazon-ebs" "al2023_ansible" {
   region        = ap-south-1
   ami_name      = "al2023-ansible-${local.timestamp}"
   instance_type = "t2.micro"
-  region = "ap-south-1"
   subnet_id = "subnet-0d03288c901f4e073"
   vpc_id = "vpc-039ed8e00ba29561f"
   security_group_id = "sg-00ac682b1eda832b7"
