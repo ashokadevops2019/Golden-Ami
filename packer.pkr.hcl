@@ -26,7 +26,7 @@ data "amazon-ami" "al202" {
 
 owners = ["amazon"]
 most_recent = true
-region = ap-south-1
+region = "ap-south-1"
 }
 source "amazon-ebs" "al2023_ansible" {
   region        = "ap-south-1"
