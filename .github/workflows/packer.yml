@@ -37,8 +37,8 @@ jobs:
         run: packer init .
 
       - name: Packer Build (branch)
-        run: packer validate packer.yml
+        run: packer validate packer.pkr.hcl
 
       - name: Packer Build (tagged)
-        run: packer build packer.yml
+        run: packer build packer.pkr.hcl
 
