@@ -55,7 +55,7 @@ build {
 
   provisioner "ansible" {
     playbook_file   = "./AMAZON2023-CIS-main/site.yaml"
-    playbook_dir    = "./AMAZON2023-CIS-main"
+    #playbook_dir    = "./AMAZON2023-CIS-main"
     user            = "ec2-user"
     extra_arguments = [
       "--extra-vars", "ansible_python_interpreter=/usr/bin/python3",
