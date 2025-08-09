@@ -17,7 +17,7 @@ locals {
 
 data "amazon-ami" "al202" {
   filters = {
-    name                 = "al2023-ami-2023.*-kernel-*-x86_64"
+    name                 = "al2023-ami-2023.8.20250808.1-kernel-6.1-x86_64"
     virtualization-type  = "hvm"
     architecture         = "x86_64"
     root-device-type     = "ebs"
