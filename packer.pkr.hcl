@@ -34,7 +34,7 @@ source "amazon-ebs" "al2023_ansible" {
   subnet_id              = "subnet-0d03288c901f4e073"
   vpc_id                 = "vpc-039ed8e00ba29561f"
   security_group_id      = "sg-00ac682b1eda832b7"
-  iam_instance_profile   = "Amiashok"
+  iam_instance_profile   = "roleforfecthec2from2acc"
   communicator           = "ssh"
   ssh_username           = "ec2-user"
   source_ami             = data.amazon-ami.al202.id
